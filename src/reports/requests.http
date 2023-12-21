@@ -1,0 +1,14 @@
+
+### Get all reports
+GET http://localhost:3000/reports
+
+
+### Create report
+POST http://localhost:3000/reports
+content-type: application/json
+
+{
+	"salary": 3000,
+	"job": "backend developer",
+	"location": "turkiye"
+}
