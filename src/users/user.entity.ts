@@ -5,6 +5,7 @@ import {
   AfterInsert,
   AfterRemove,
   AfterUpdate,
+  Unique,
 } from 'typeorm';
 
 @Entity()
@@ -13,6 +14,7 @@ export class User {
   id: number;
 
   @Column()
+  @Unique(['email'])
   email: string;
 
   @Column()

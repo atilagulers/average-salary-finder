@@ -4,17 +4,30 @@ GET http://localhost:3000/auth?
 ### Find a particular user with given ID
 GET http://localhost:3000/auth/1
 
+### Sign In
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+	"email": "test@test.com",
+	"password": "test"
+}
+
+### Sign Out
+POST http://localhost:3000/auth/signout
+
+
 ### Create a new user
 POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-	"email": "atila@example.com",
-	"password": "123456",
+	"email": "test1@test.com",
+	"password": "test"
 }
 
 ### Update user
-PATCH http://localhost:3000/auth/1
+PATCH http://localhost:3000/auth /1
 content-type: application/json
 
 {
@@ -23,4 +36,8 @@ content-type: application/json
 }
 
 ### Delete user
-DELETE http://localhost:3000/auth/4
+DELETE http://localhost:3000/auth/1
+
+
+### Who am I?
+GET http://localhost:3000/auth/whoami
